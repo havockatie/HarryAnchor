@@ -93,7 +93,7 @@ Citizen.CreateThread(function ()
 				-- Si le Flag (== true) on affiche le texte d'information pour expliquer comment ATTACH
 				if TextVisible then
 					Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
-					Citizen.InvokeNative(0x5F68520888E69014, "Bouton " .. TexteAncre .. " pour jeter ou remonter votre ancre")
+					Citizen.InvokeNative(0x5F68520888E69014, "Press " .. TexteAncre .. " to anchor the boat")
 					-- EN : Citizen.InvokeNative(0x5F68520888E69014, "Button " .. TexteAncre .. " for throw or take back the anchor")
 					Citizen.InvokeNative(0x238FFE5C7B0498A6, 0, false, true, -1)				
 					TextVisible = false
@@ -112,7 +112,7 @@ Citizen.CreateThread(function ()
 					if (myVehicleSpeed * 3.6) > 20 then
 					
 						Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
-						Citizen.InvokeNative(0x5F68520888E69014, "Trop rapide pour jeter l'ancre")
+						Citizen.InvokeNative(0x5F68520888E69014, "Slow down to anchor the boat")
 						-- EN : Citizen.InvokeNative(0x5F68520888E69014, "Too much speed for throwing anchor")
 						Citizen.InvokeNative(0x238FFE5C7B0498A6, 0, false, true, -1)	
 					
@@ -129,7 +129,7 @@ Citizen.CreateThread(function ()
 							SetVehicleEngineOn(myVehicle, true, false, true)								
 							Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
 							Citizen.InvokeNative(0x5F68520888E69014, "Ancre remontée")
-							-- EN : Citizen.InvokeNative(0x5F68520888E69014, "Anchor back")
+							-- EN : Citizen.InvokeNative(0x5F68520888E69014, "Boat unanchored")
 							Citizen.InvokeNative(0x238FFE5C7B0498A6, 0, false, true, -1)				
 							TextVisible = false
 						-- Si l'ancre n'est pas encore jetée, on la jette
@@ -141,7 +141,7 @@ Citizen.CreateThread(function ()
 							TaskLeaveVehicle(playerPed, myVehicle, 64)
 							Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
 							Citizen.InvokeNative(0x5F68520888E69014, "Ancre jetée, bateau arrêté")
-							-- EN : Citizen.InvokeNative(0x5F68520888E69014, "Throwed anchor, boat stopped")
+							-- EN : Citizen.InvokeNative(0x5F68520888E69014, "Boat anchored")
 							Citizen.InvokeNative(0x238FFE5C7B0498A6, 0, false, true, -1)				
 							TextVisible = false
 						end	
