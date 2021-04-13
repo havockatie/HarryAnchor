@@ -128,7 +128,7 @@ Citizen.CreateThread(function ()
 							AncreJetee = false
 							SetVehicleEngineOn(myVehicle, true, false, true)								
 							Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
-							Citizen.InvokeNative(0x5F68520888E69014, "Ancre remontée")
+							Citizen.InvokeNative(0x5F68520888E69014, "Boat unanchored")
 							-- EN : Citizen.InvokeNative(0x5F68520888E69014, "Boat unanchored")
 							Citizen.InvokeNative(0x238FFE5C7B0498A6, 0, false, true, -1)				
 							TextVisible = false
@@ -140,7 +140,7 @@ Citizen.CreateThread(function ()
 							SetVehicleEngineOn(myVehicle, false, false, true)
 							TaskLeaveVehicle(playerPed, myVehicle, 64)
 							Citizen.InvokeNative(0x8509B634FBE7DA11, "STRING")
-							Citizen.InvokeNative(0x5F68520888E69014, "Ancre jetée, bateau arrêté")
+							Citizen.InvokeNative(0x5F68520888E69014, "Boat anchored")
 							-- EN : Citizen.InvokeNative(0x5F68520888E69014, "Boat anchored")
 							Citizen.InvokeNative(0x238FFE5C7B0498A6, 0, false, true, -1)				
 							TextVisible = false
